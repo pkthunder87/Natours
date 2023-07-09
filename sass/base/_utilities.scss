@@ -17,6 +17,10 @@
 
 .u-grid--col-2-of-3 {
   grid-template-columns: repeat(3, 1fr);
+
+  div:last-child {
+    grid-column: span 2;
+  }
 }
 
 .u-grid--col-1-of-4 {
@@ -25,8 +29,16 @@
 
 .u-grid--col-2-of-4 {
   grid-template-columns: repeat(4, 1fr);
+
+  div:last-child {
+    grid-column: span 2;
+  }
 }
 
 .u-grid--col-3-of-4 {
   grid-template-columns: repeat(4, 1fr);
+
+  div:last-child {
+    grid-column: span 3;
+  }
 }

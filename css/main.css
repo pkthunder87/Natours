@@ -185,6 +185,9 @@ body {
 .u-grid--col-2-of-3 {
   grid-template-columns: repeat(3, 1fr);
 }
+.u-grid--col-2-of-3 div:last-child {
+  grid-column: span 2;
+}
 
 .u-grid--col-1-of-4 {
   grid-template-columns: repeat(4, 1fr);
@@ -193,9 +196,15 @@ body {
 .u-grid--col-2-of-4 {
   grid-template-columns: repeat(4, 1fr);
 }
+.u-grid--col-2-of-4 div:last-child {
+  grid-column: span 2;
+}
 
 .u-grid--col-3-of-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+.u-grid--col-3-of-4 div:last-child {
+  grid-column: span 3;
 }
 
 .btn:link, .btn:visited {
@@ -269,16 +278,6 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
-.row .col-2-of-3 {
-  grid-column: span 2;
-}
-.row .col-2-of-4 {
-  grid-column: span 2;
-}
-.row .col-3-of-4 {
-  grid-column: span 3;
-}
-
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
