@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
   display: grid;
   column-gap: $gutter-horizontal;
@@ -10,7 +9,6 @@
   }
 
   [class^="col-"] {
-    background-color: orangered;
   }
 
   .col-1-of-2 {
@@ -33,28 +31,4 @@
   .col-3-of-4 {
     grid-column: span 3;
   }
-}
-
-.grid--col-1-of-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--col-1-of-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--col-2-of-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--col-1-of-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--col-2-of-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--col-3-of-4 {
-  grid-template-columns: repeat(4, 1fr);
 }
