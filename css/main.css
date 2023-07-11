@@ -313,6 +313,7 @@ body {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  border-radius: 0;
 }
 .btn-text:hover {
   background-color: #55c57a;
@@ -579,20 +580,49 @@ body {
   -webkit-transform: translateX(-3rem) skewX(12deg);
       -ms-transform: translateX(-3rem) skewX(12deg);
           transform: translateX(-3rem) skewX(12deg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
 }
 .story__img {
   height: 100%;
+  -webkit-transform: translate(-4rem) scale(1.4);
+      -ms-transform: translate(-4rem) scale(1.4);
+          transform: translate(-4rem) scale(1.4);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.story__text {
-  -webkit-transform: skewX(12deg);
-      -ms-transform: skewX(12deg);
-          transform: skewX(12deg);
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+      -ms-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  -webkit-transform: translate(-4rem) scale(1);
+      -ms-transform: translate(-4rem) scale(1);
+          transform: translate(-4rem) scale(1);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
 }
 
 .row {
