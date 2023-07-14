@@ -19,13 +19,28 @@
   margin-top: 10rem !important;
 }
 
+// @include respond(tab-port) {
+//   width: 100% !important;
+//   margin-right: 0;
+// }
+
 // Re-usable grids
 .u-grid--col-1-of-2 {
   grid-template-columns: repeat(2, 1fr);
+
+  @include respond(tab-port) {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    margin-right: 0;
+    margin-bottom: $gutter-vertical;
+  }
 }
 
 .u-grid--col-1-of-3 {
   grid-template-columns: repeat(3, 1fr);
+  @include respond(tab-port) {
+    @include gridBreakPoint;
+  }
 }
 
 .u-grid--col-2-of-3 {
@@ -33,6 +48,10 @@
 
   div:last-child {
     grid-column: span 2;
+  }
+
+  @include respond(tab-port) {
+    @include gridBreakPoint;
   }
 }
 
@@ -43,10 +62,19 @@
   div:last-child {
     grid-column: span 2;
   }
+
+  // Make last row element hidden
+  // @include respond(tab-port) {
+  //   grid-template-rows: 1fr;
+  // }
 }
 
 .u-grid--col-1-of-4 {
   grid-template-columns: repeat(4, 1fr);
+
+  @include respond(tab-port) {
+    @include gridBreakPoint;
+  }
 }
 
 .u-grid--col-2-of-4 {
@@ -55,6 +83,10 @@
   div:last-child {
     grid-column: span 2;
   }
+
+  @include respond(tab-port) {
+    @include gridBreakPoint;
+  }
 }
 
 .u-grid--col-3-of-4 {
@@ -62,5 +94,9 @@
 
   div:last-child {
     grid-column: span 3;
+  }
+
+  @include respond(tab-port) {
+    @include gridBreakPoint;
   }
 }

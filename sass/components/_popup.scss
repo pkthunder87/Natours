@@ -38,6 +38,10 @@
 
   &__image-2 {
     order: 4;
+    // Make last row element hidden
+    // @include respond(tab-port) {
+    //   visibility: hidden;
+    // }
   }
 
   &__right {
