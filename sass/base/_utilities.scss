@@ -36,6 +36,15 @@
   }
 }
 
+.u-grid--col-2-row-2-of-3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  div:last-child {
+    grid-column: span 2;
+  }
+}
+
 .u-grid--col-1-of-4 {
   grid-template-columns: repeat(4, 1fr);
 }
