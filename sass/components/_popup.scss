@@ -34,13 +34,22 @@
   }
 
   &__image-1 {
+    @include respond(phone) {
+      order: -2;
+    }
   }
 
   &__image-2 {
     order: 4;
+
+    @include respond(phone) {
+      order: -1;
+    }
+
     // Make last row element hidden
-    // @include respond(tab-port) {
+    // @include respond(phone) {
     //   visibility: hidden;
+    //   order: 6;
     // }
   }
 
@@ -59,6 +68,18 @@
     column-gap: 4rem; //1em = 14px
     column-rule: 1px solid $color-grey-light-2;
 
+    @include respond(tab-port) {
+      overflow: scroll;
+      column-count: 1;
+    }
+
+    @include respond(phone) {
+      height: 20rem;
+      overflow: scroll;
+
+      column-count: 1;
+    }
+
     hyphens: auto;
   }
 
@@ -66,6 +87,12 @@
   &:target {
     opacity: 1;
     visibility: visible;
+  }
+
+  @include respond(phone) {
+    .btn {
+      float: right;
+    }
   }
 
   &:target &__content {
