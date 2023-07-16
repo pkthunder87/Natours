@@ -121,6 +121,10 @@
 
   // FUNCTIONALITY
   &__checkbox:checked ~ &__background {
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
     transform: scale(80);
   }
   &__checkbox:checked ~ &__nav {

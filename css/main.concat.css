@@ -842,6 +842,53 @@ body {
   perspective: 150rem;
   position: relative;
   height: 50rem;
+  /*
+  // BIG MEDIA QUERY CHANGES!!!
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
+  */
 }
 .card__side {
   height: 50rem;
@@ -960,43 +1007,6 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
-}
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
-  .card {
-    height: auto;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  }
-  .card__side {
-    height: auto;
-    position: relative;
-    box-shadow: none;
-  }
-  .card__side--back {
-    transform: rotateY(0);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-  }
-  .card__details {
-    padding: 1rem 3rem;
-  }
-  .card:hover .card__side--front {
-    transform: rotateY(0);
-  }
-  .card__cta {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translate(0);
-    width: 100%;
-    padding: 7rem 4rem 4rem 4rem;
-  }
-  .card__price-box {
-    margin-bottom: 3rem;
-  }
-  .card__price-value {
-    font-size: 4rem;
-  }
 }
 
 .composition {
@@ -1605,6 +1615,7 @@ body {
   transform: translateX(1rem);
 }
 .navigation__checkbox:checked ~ .navigation__background {
+  background-image: radial-gradient(#7ed56f, #28b485);
   transform: scale(80);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
